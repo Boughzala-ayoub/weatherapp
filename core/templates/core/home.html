@@ -1,0 +1,30 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'core/style.css' %}">
+
+  <head>
+    <meta charset="utf-8">
+    <title>weather app</title>
+  </head>
+  <body>
+    <div>
+      <h1>Find the weather</h1>
+      <form  method="GET
+      <label for="city"></label>
+      <input type="text" name="city" id="city" value="{{ request.GET.city}}" placeholder="city..."><br>
+      <input type="submit" value="Submit">
+
+      </form>
+      {% if weather %}
+        <h3>{{weather.region}}</h3>
+        <h3>{{weather.daytime}}</h3>
+        <h3>{{weather.temp}}° C</h3>
+        <h3>{{weather.status}}</h3>
+        {% endif %}
+        <h2>Ceated by Ayoub Boughzala</h2>
+    </div>
+
+
+
+
+  </body>
